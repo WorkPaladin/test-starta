@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap&subset=cyrillic');
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 48px;
+	color: #227947;
+	padding: 0;
+	margin: 0;
+}
+h2 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #383838;
+	margin: 0;
+	padding: 0;
+}
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: space-around;*/
+	align-items: center;
+	margin: 27px -5px 19px -5px;
+}
+.calendar {
+	width: 185px;
+	box-sizing: border-box;
+	border: 1px solid #49BB7B;
+	background-color: #E7F5EC;
+	border-radius: 5px;
+	height: 230px;
+	margin: 8px 7px;
+	text-align: center;
+}
+.calendar_month {
+	width: 124px;
+	border-bottom: 1px solid #808080;
+	padding: 9px 0 4px 0;
+	margin: 0 auto;
+	font-size: 18px;
+	color: #0d592d;
+}
+.calendar_table {
+	margin: 12px auto;
+	border-collapse: collapse;
+}
+.day_color:hover {
+	cursor: pointer;
+	background-color: #33AA75;
+	color: #fff;
+}
+.calendar_day {
+	color: #0d592d;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	border: 2px solid #E7F5EC;
+	height: 20px;
+	width: 20px;
+}
+.form_phone {
+	width: 185px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	padding: 0 13px; 
+	margin-top: 8px;
+	border-style: solid;
+  	border-width: 1px;
+  	border-color: rgb(34, 34, 34);
+  	background-color: rgba(0, 0, 0, 0.051);
+  	opacity: 0.5;
+  	box-shadow: inset 0px 5px 5.64px 0.36px rgba(0, 0, 0, 0.1);
+  	height: 39px;
+  	box-sizing: border-box;
+}
+.form_submit {
+	background-color: #33AA75;
+	line-height: 40px;
+	width: 185px;
+	margin: 0 12px;
+	border: none;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #fff;
+}
+.form_submit:hover {
+	background-color: #227947;
+	cursor: pointer;
+}
+#form_date label {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #2f2f2f;
+}
+.click {
+	background-color: #33AA75;
+	color: #fff;
+}
+.reserved_date {
+	background-color: #227947;
+	color: #fff;
+}
+.reserved_days {
+	display: none;
+}
+.background {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+}
+.error {
+	color: #ED2936;
+	display: inline-block;
+	padding: 10px 0;
+}
+#responds {
+	background-color: #fff;
+	position: relative;
+	color: #227947;
+	font-size: 30px;
+	text-align: center;
+	border: 6px dashed #33AA75;
+	height: 200px;
+	width: 400px;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	z-index: 2;
+}
+#close {
+	position: absolute;
+	right: -6px;
+	top: -6px;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 30px;
+	background-color: #FA917A;
+	color: #fff;
+}
+#close:hover {
+	cursor: pointer;
+	background-color: #804A3E;
+}
+@media (min-width: 1100px) and (max-width: 1280px) {
+	.calendar {
+		margin: 8px 1%;
+		width: 18%;
+		min-width: 185px;
+	}
+}
+@media (min-width: 886px) and (max-width: 1099px) {
+	.calendar {
+		margin: 8px 1%;
+		width: 23%;
+		min-width: 185px;
+	}
+}
+@media (min-width: 696px) and (max-width: 885px) {
+	.calendar {
+		margin: 8px 1%;
+		width: 31.33%;
+		min-width: 185px;
+	}
+}
+@media (min-width: 462px) and (max-width: 695px) {
+	.calendar {
+		margin: 8px 1%;
+		width: 48%;
+		min-width: 185px;
+	}
+	.error {
+		width: 100%;
+		text-align: center;
+	}
+	.form_phone {
+		width: 49%;
+		margin-right: 1%;
+	}
+	.form_submit {
+		width: 49%;
+		margin: 0;
+	}
+}
+@media (max-width: 560px) {
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+@media (max-width: 461px) {
+	.calendar {
+		margin: 8px 1%;
+		width: 98%;
+		min-width: 185px;
+	}
+	.form_phone {
+		width: 100%;
+	}
+	.form_submit {
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+	.error {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+
+
